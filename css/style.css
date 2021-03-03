@@ -1,66 +1,151 @@
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color: #5d3800;
+
+div#wrapper{
+	width:100%;
+	height: 1500px;   /*height:100%;*/
+
+	background-color: #eee;
+
+	text-align: center;
 }
-.face{
+div.face{
 	position: relative;
-	width: 300px;
-	height: 300px;
-	background-color: #ffcd00;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	top: 20%;
+
+
+	margin-left: 0px;
+	margin-right: 0px;
+
+	width: 200px;
+	height: 250px;
+	display: inline-block;
+	overflow: hidden;
+
+
+	background-color: #2db5ae;
+
+	border-radius: 45% 45% 0 0 ;
 }
-.face::before{
-	content: '';
-	position: absolute;
-	top: 180px;
-	width: 150px;
-	height: 70px;
-	background-color: #b57700;
-	border-bottom-left-radius: 70px; 
-	border-bottom-right-radius: 70px; 
-	transition: 0.5s;
-}
-.face:hover::before{
-	top: 180px;
-	width: 150px;
-	height: 20px;
-	background-color: #b57700;
-	border-bottom-left-radius: 0px; 
-	border-bottom-right-radius: 0px; 
-}
-.eyes{
+
+
+div.eyes{
 	position: relative;
-	top: -40px;
-	display: flex;
-}
-.eyes .eye{
-	position: relative;
-	width: 80px;
+	top: 70px;
+	width: 100%;
 	height: 80px;
-	display: block;
-	background-color: #fff;
-	margin: 0 15px;
-	border-radius: 50%;
+
+	background-color: #2db5ae;
 }
-.eyes .eye::before{
-	content: '';
+
+div.eye-left{
+
 	position: absolute;
-	top: 50%;
-	left: 25px;
-	transform: translate(-50%,-50%);
-	width: 40px;
-	height: 40px;
-	background-color: #333;
-	border-radius: 50%;
+	left: 10%;
+	
+	overflow: hidden;
+	width: 35%;
+	height: 100%;
+
+	background-color: white;
+	border-radius: 45% 45% 55% 55%;
+}
+div.eye-right{
+
+	position: absolute;
+	right: 10%;
+
+	overflow: hidden;
+	width: 35%;
+	height: 100%;
+
+	
+	background-color: white;
+	border-radius: 45% 45% 55% 55%;
+}
+
+div.eye-in{
+	position: relative;
+
+	display: inline-block;
+	
+	width: 45%;   
+	height: 55%;
+	
+	margin-right: 0;
+	margin-left: 0;
+	margin-top: 20px;
+
+	background-color: black;
+
+	border-radius: 50% 50%;    /*border-radius的弧度大小與寬度高度有關*/
+								/*四個值依次控制的是哪個角。*/
+}
+
+div.nose{
+	position: relative;
+	top: 32%;
+	text-align: center;
+
+}
+
+div.nose a{
+
+	display: inline-block;
+	background-color: white;
+	height: 10px;
+	width: 10px;
+
+	border-radius: 5px;
+}
+
+div.mouth{ /*為什麼會卡一半!??????*/
+	position: relative;
+	top:90px;
+	width: 100%;
+	height: 25%;
+	
+	display: inline-block;
+	overflow: hidden;
+	/*margin-left: 0px;
+	margin-right: 0px;*/
+	
+	text-align: center;
+	background-color: #614030;
+
+	border-radius: 81% 5% 81% 5%;
+}
+
+div.tooth{
+	position: relative;
+	/*top: -5px;*/
+	
+	height: 50px;
+	width: 35px;
+	
+	display: inline-block;
+	margin-left: -7px;
+
+	background-color: white;
+	
+	border-radius: 0 0 50% 50%;
+
+}
+
+div#tooth1{
+	/*height: 50px;*/
+}
+div#tooth2{
+	/*height: 45px;*/
+	top: -5px;
+}
+div#tooth3{
+	/*height: 40px;*/
+	top: -10px;
+}
+div#tooth4{
+	/*height: 35px;*/
+	top: -15px;
 }

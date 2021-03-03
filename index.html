@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css"/>
-	<title>眼睛跟著滑鼠動</title>
+	<title>眼鏡隨著滑鼠動-模仿</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js"></script>
 </head>
 <body>
-	<div class="face">
-		<div class="eyes">
-			<div class="eye"></div>
-			<div class="eye"></div>
-		</div>
+	<div id="wrapper">
+			<div class="face" id="blue">
+				<div class="eyes">
+					<div class="eye-left">
+						<div class="eye-in"></div>
+					</div>
+					<div class="eye-right">
+						<div class="eye-in"></div>
+					</div>
+				</div>
+				<div class="nose">
+					<a></a>
+					<a></a>
+				</div>
+				<div class="mouth">
+					<div class="tooth" id="tooth1"></div>
+					<div class="tooth" id="tooth2"></div>
+					<div class="tooth" id="tooth3"></div>
+					<div class="tooth" id="tooth4"></div>
+
+				</div>
+			</div>
 	</div>
-	<script>
-		document.querySelector('body').addEventListener('mousemove', eyeball);
-		function eyeball(){
-			var eye = document.querySelectorAll('.eye');
-			eye.forEach(function(eye){
-				let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
-				let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
-				let radian = Math.atan2(event.pageX - x, event.pageY - y);
-				let rot = (radian * (180 / Math.PI) * -1) + 0;
-				eye.style.transform = "rotate("+ rot +"deg)";
-			})
-		}
-	</script>
 </body>
 </html>
